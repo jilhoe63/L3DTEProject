@@ -1,26 +1,59 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/Test_car.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Rigid_Body_Test.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Object Files/Test_field.obj" type="ArrayMesh" id=3]
 
 [sub_resource type="BoxShape" id=1]
-
-[sub_resource type="CubeMesh" id=2]
 
 [node name="Test_scene" type="Spatial"]
 
 [node name="StaticBody" type="StaticBody" parent="."]
-transform = Transform( 4.86478, 0, 0, 0, 0.138804, 0, 0, 0, 4.86478, 0, 0, 0 )
+transform = Transform( 66.7679, 0, 0, 0, 0.138804, 0, 0, 0, 66.7679, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
 shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="StaticBody/CollisionShape"]
-mesh = SubResource( 2 )
+transform = Transform( 0.22, 0, 0, 0, 0.22, 0, 0, 0, 0.22, 0, 0, 0 )
+mesh = ExtResource( 3 )
 skeleton = NodePath("../..")
 material/0 = null
+material/1 = null
+
+[node name="StaticBody2" type="StaticBody" parent="."]
+transform = Transform( 66.7679, 0, 0, 0, 0.138804, 0, 0, 0, 66.7679, 134.235, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody2"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="StaticBody2/CollisionShape"]
+transform = Transform( 0.22, 0, 0, 0, 0.22, 0, 0, 0, 0.22, 0, 0, 0 )
+mesh = ExtResource( 3 )
+skeleton = NodePath("../..")
+material/0 = null
+material/1 = null
 
 [node name="Test_car" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.46105, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 80.1011, 0 )
 
-[node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.0316027, 0.999501, 0, -0.999501, 0.0316027, 0, 5.84813, 0 )
+[node name="Rigid_Body_Test" parent="." instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 99.6595, 6.13346, 28.6288 )
+
+[node name="Rigid_Body_Test7" parent="." instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 99.6728, 3, 28.6288 )
+
+[node name="Rigid_Body_Test2" parent="." instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 99.6534, 3, 25.8711 )
+
+[node name="Rigid_Body_Test3" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 99.1579, 5.71133, 25.9674 )
+
+[node name="Rigid_Body_Test4" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 99.9291, 8.73417, 28.9666 )
+
+[node name="Rigid_Body_Test5" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 99.5597, 9.0119, 25.9105 )
+
+[node name="Rigid_Body_Test6" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 99.6262, 11.4232, 27.842 )
