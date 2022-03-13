@@ -11,8 +11,8 @@
 
 [node name="VehicleBody" type="VehicleBody" parent="."]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
-mass = 1000.0
-engine_force = 200.0
+mass = 500.0
+engine_force = 500.0
 script = ExtResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="VehicleBody"]
@@ -26,9 +26,11 @@ material/1 = null
 
 [node name="VehicleWheel" type="VehicleWheel" parent="VehicleBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1, -0.226, 1.366 )
-engine_force = 200.0
+engine_force = 500.0
 use_as_traction = true
 use_as_steering = true
+wheel_roll_influence = 0.15
+wheel_friction_slip = 11.0
 suspension_travel = 100.0
 suspension_stiffness = 5.0
 
@@ -40,9 +42,11 @@ material/2 = null
 
 [node name="VehicleWheel2" type="VehicleWheel" parent="VehicleBody"]
 transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 1.1, -0.226, 1.366 )
-engine_force = 200.0
+engine_force = 500.0
 use_as_traction = true
 use_as_steering = true
+wheel_roll_influence = 0.15
+wheel_friction_slip = 11.0
 suspension_travel = 100.0
 suspension_stiffness = 5.0
 
@@ -54,8 +58,9 @@ material/2 = null
 
 [node name="VehicleWheel3" type="VehicleWheel" parent="VehicleBody"]
 transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 1.1, -0.226, -1.366 )
-engine_force = 200.0
+engine_force = 500.0
 use_as_traction = true
+wheel_roll_influence = 0.15
 wheel_friction_slip = 10.0
 suspension_travel = 100.0
 suspension_stiffness = 5.0
@@ -68,8 +73,9 @@ material/2 = null
 
 [node name="VehicleWheel4" type="VehicleWheel" parent="VehicleBody"]
 transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -1.1, -0.226, -1.389 )
-engine_force = 200.0
+engine_force = 500.0
 use_as_traction = true
+wheel_roll_influence = 0.15
 wheel_friction_slip = 10.0
 suspension_travel = 100.0
 suspension_stiffness = 5.0

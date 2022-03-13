@@ -17,3 +17,6 @@ func _input(event):
 		if event is InputEventMouseMotion:
 			rotation_degrees.x = clamp(rotation_degrees.x-event.relative.y*0.1,-45,45)
 			rotation_degrees.y -= event.relative.x*0.1
+
+
+#aaaaaaaaaabfqbafuoqbauovfniaop

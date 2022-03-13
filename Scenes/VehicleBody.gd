@@ -6,7 +6,7 @@ var accel_speed = 20
 var steer_angle = deg2rad(30)
 var steer_speed = 3
 
-var brake_power = 10
+var brake_power = 30
 var brake_speed = 0
 
 func _physics_process(delta):
@@ -21,4 +21,4 @@ func _physics_process(delta):
 	print(brake)
 	
 func _ready():
-	pass # Replace with function body.
+	pass
