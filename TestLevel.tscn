@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://movement.gd" type="Script" id=2]
+[ext_resource path="res://GameCamera.tscn" type="PackedScene" id=3]
+[ext_resource path="res://GameCamera.gd" type="Script" id=4]
+
+[node name="Level" type="Spatial"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, 0, 0 )
+script = ExtResource( 2 )
+
+[node name="Camera" parent="." instance=ExtResource( 3 )]
+script = ExtResource( 4 )
