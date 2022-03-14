@@ -11,7 +11,7 @@
 
 [node name="VehicleBody" type="VehicleBody" parent="."]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
-mass = 500.0
+mass = 1.0
 engine_force = 500.0
 script = ExtResource( 3 )
 
