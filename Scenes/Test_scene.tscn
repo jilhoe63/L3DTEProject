@@ -1,14 +1,14 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scenes/Test_car.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Rigid_Body_Test.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Object Files/Test_field.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://Fonts/DS-DIGIT.TTF" type="DynamicFontData" id=4]
+[ext_resource path="res://Scenes/Timer_Label.gd" type="Script" id=5]
 
 [sub_resource type="GDScript" id=4]
 script/source = "extends Spatial
 
-
-var time = 0
 "
 
 [sub_resource type="BoxShape" id=1]
@@ -27,6 +27,13 @@ fog_sun_amount = 1.0
 fog_depth_enabled = false
 fog_depth_begin = 100.0
 dof_blur_far_distance = 200.0
+
+[sub_resource type="BoxShape" id=6]
+
+[sub_resource type="BoxShape" id=7]
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 4 )
 
 [node name="Test_scene" type="Spatial"]
 script = SubResource( 4 )
@@ -104,10 +111,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 99.1579, 5.71133, 25.9674 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 99.9291, 8.73417, 28.9666 )
 
 [node name="Rigid_Body_Test5" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 99.5597, 9.0119, 25.9105 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.386995, 1.43841, 25.9105 )
 
 [node name="Rigid_Body_Test6" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 99.6262, 11.4232, 27.842 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.122097, 1.57623, -34.733 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 2 )
@@ -115,4 +122,30 @@ environment = SubResource( 2 )
 [node name="Area Timer start" type="Area" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.37291, -33 )
 
+[node name="CollisionShape" type="CollisionShape" parent="Area Timer start"]
+shape = SubResource( 6 )
+
 [node name="Area Timer stop" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 21.2003 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Area Timer stop"]
+shape = SubResource( 7 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_scale = Vector2( 2, 2 )
+
+[node name="Label" type="Label" parent="CanvasLayer/Control"]
+margin_right = 100.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 5 )
+text = "00:00:000
+this is a test
+02:23:034"
+script = ExtResource( 5 )
+
+[connection signal="body_entered" from="Area Timer start" to="CanvasLayer/Control/Label" method="_on_Area_Timer_start_body_entered"]
+[connection signal="body_entered" from="Area Timer stop" to="CanvasLayer/Control/Label" method="_on_Area_Timer_stop_body_entered"]
