@@ -3,6 +3,7 @@ extends Label
 var time = 0
 var timer_on = false
 
+
 func _process(delta):
 	if(timer_on):
 		time += delta
@@ -17,15 +18,17 @@ func _process(delta):
 	pass
 	
 func _ready():
-	pass # Replace with function body.
+	pass
 
 func _on_Area_Timer_start_body_entered(body):
-	timer_on = true
-	print("timer start")
-	pass # Replace with function body.
+	if body.is_in_group("Player"):
+		timer_on = true
+		print("timer start")
+		pass
 
 
 func _on_Area_Timer_stop_body_entered(body):
-	timer_on = false
-	print("timer stop")
-	pass # Replace with function body.
+	if body.is_in_group("Player"):
+		timer_on = false
+		print("timer stop")
+		pass
