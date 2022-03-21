@@ -7,7 +7,7 @@
 [node name="Rigid_Body_Test" type="Spatial"]
 
 [node name="RigidBody" type="RigidBody" parent="."]
-mass = 0.01
+mass = 10000.0
 
 [node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
 shape = SubResource( 1 )
