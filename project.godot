@@ -11,7 +11,10 @@ config_version=4
 [application]
 
 config/name="L3DTEProject"
+run/main_scene="res://Scenes/Menu.tscn"
+boot_splash/image="res://Image_assets/cody.PNG"
 config/icon="res://Image_assets/Jletter.png"
+config/windows_native_icon="res://Image_assets/Jletter.png"
 
 [input]
 
