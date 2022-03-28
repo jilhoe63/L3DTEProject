@@ -6,12 +6,12 @@ func _ready():
 
 
 func _on_Start_Button_pressed():
-	get_tree().change_scene("res://Scenes/Test_scene.tscn")
+	get_tree().change_scene("res://Scenes/Scene_Selection.tscn")
 	pass
 
 
 func _on_Options_Button_pressed():
-	print("feature not yet implemented ... but you know that jilles. Jilles, I know what you think, how you think and your deepest fears. I can destroy you.")
+	print("feature not yet implemented")
 	pass
 
 
