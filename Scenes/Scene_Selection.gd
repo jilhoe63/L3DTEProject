@@ -10,7 +10,7 @@ func _on_Button_1_pressed():
 
 
 func _on_Button_2_pressed():
-	get_tree().change_scene("res://Scenes/ramp.tscn")
+	print("feature not yet implemented")
 	pass # Replace with function body.
 
 
