@@ -4,7 +4,7 @@ var horse_power = 2500
 var accel_speed = 20
 
 var steer_angle = deg2rad(30)
-var steer_speed = 3
+var steer_speed = 2
 
 var brake_power = 40
 var brake_speed = 0

@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Object Files/Test_Car_Body.obj" type="ArrayMesh" id=1]
-[ext_resource path="res://Object Files/Test_Car_Wheel.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://Object Files/Beta_Juliet_Body.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://Object Files/Beta_Juliet_wheel.obj" type="ArrayMesh" id=2]
 [ext_resource path="res://Scenes/VehicleBody.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/Camera.gd" type="Script" id=4]
 
@@ -10,7 +10,7 @@
 [node name="Test_car" type="Spatial" groups=["Player"]]
 
 [node name="VehicleBody" type="VehicleBody" parent="." groups=["Player"]]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
+transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 0 )
 mass = 500.0
 engine_force = 500.0
 script = ExtResource( 3 )
@@ -23,16 +23,17 @@ shape = SubResource( 1 )
 mesh = ExtResource( 1 )
 material/0 = null
 material/1 = null
+material/2 = null
+material/3 = null
 
 [node name="VehicleWheel" type="VehicleWheel" parent="VehicleBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1, -0.226, 1.366 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.65, -0.4, 1.22 )
 engine_force = 500.0
 use_as_traction = true
 use_as_steering = true
-wheel_roll_influence = 0.15
 wheel_friction_slip = 11.0
-suspension_travel = 100.0
-suspension_stiffness = 5.0
+suspension_travel = 0.01
+suspension_stiffness = 25.0
 
 [node name="MeshInstance" type="MeshInstance" parent="VehicleBody/VehicleWheel"]
 mesh = ExtResource( 2 )
@@ -41,14 +42,13 @@ material/1 = null
 material/2 = null
 
 [node name="VehicleWheel2" type="VehicleWheel" parent="VehicleBody"]
-transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 1.1, -0.226, 1.366 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.65, -0.4, 1.22 )
 engine_force = 500.0
 use_as_traction = true
 use_as_steering = true
-wheel_roll_influence = 0.15
 wheel_friction_slip = 11.0
-suspension_travel = 100.0
-suspension_stiffness = 5.0
+suspension_travel = 0.01
+suspension_stiffness = 25.0
 
 [node name="MeshInstance" type="MeshInstance" parent="VehicleBody/VehicleWheel2"]
 mesh = ExtResource( 2 )
@@ -57,12 +57,11 @@ material/1 = null
 material/2 = null
 
 [node name="VehicleWheel3" type="VehicleWheel" parent="VehicleBody"]
-transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 1.1, -0.226, -1.366 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.65, -0.4, -1 )
 engine_force = 500.0
 use_as_traction = true
-wheel_roll_influence = 0.15
-suspension_travel = 100.0
-suspension_stiffness = 5.0
+suspension_travel = 0.01
+suspension_stiffness = 25.0
 
 [node name="MeshInstance" type="MeshInstance" parent="VehicleBody/VehicleWheel3"]
 mesh = ExtResource( 2 )
@@ -71,12 +70,11 @@ material/1 = null
 material/2 = null
 
 [node name="VehicleWheel4" type="VehicleWheel" parent="VehicleBody"]
-transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -1.1, -0.226, -1.389 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.65, -0.4, -1 )
 engine_force = 500.0
 use_as_traction = true
-wheel_roll_influence = 0.15
-suspension_travel = 100.0
-suspension_stiffness = 5.0
+suspension_travel = 0.01
+suspension_stiffness = 25.0
 
 [node name="MeshInstance2" type="MeshInstance" parent="VehicleBody/VehicleWheel4"]
 mesh = ExtResource( 2 )
@@ -85,7 +83,7 @@ material/1 = null
 material/2 = null
 
 [node name="Camera" type="SpringArm" parent="VehicleBody"]
-transform = Transform( -1, 0, -8.74228e-08, -2.26267e-08, 0.965926, 0.258819, 8.44439e-08, 0.258819, -0.965926, 0, 2.41422, -5.53606 )
+transform = Transform( -0.792673, -0.157788, 0.588874, -2.26267e-08, 0.965926, 0.258819, -0.609647, 0.205159, -0.765663, 3.275, 1.10233, -3.52617 )
 script = ExtResource( 4 )
 
 [node name="ClippedCamera" type="ClippedCamera" parent="VehicleBody/Camera"]

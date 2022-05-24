@@ -10,7 +10,7 @@ extents = Vector3( 1, 0.350191, 1 )
 
 [node name="Test_Car_2" type="Spatial"]
 
-[node name="VehicleBody" type="VehicleBody" parent="."]
+[node name="VehicleBody" type="VehicleBody" parent="." groups=["test_car_2"]]
 mass = 700.0
 engine_force = 500.0
 script = ExtResource( 3 )
