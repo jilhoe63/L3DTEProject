@@ -11,7 +11,7 @@
 
 [node name="VehicleBody" type="VehicleBody" parent="." groups=["Player"]]
 transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 0 )
-mass = 500.0
+mass = 1000.0
 engine_force = 500.0
 script = ExtResource( 3 )
 
@@ -31,8 +31,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.65, -0.4, 1.22 )
 engine_force = 500.0
 use_as_traction = true
 use_as_steering = true
-wheel_friction_slip = 11.0
-suspension_travel = 0.01
+wheel_friction_slip = 100.0
 suspension_stiffness = 25.0
 
 [node name="MeshInstance" type="MeshInstance" parent="VehicleBody/VehicleWheel"]
@@ -46,8 +45,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.65, -0.4, 1.22 )
 engine_force = 500.0
 use_as_traction = true
 use_as_steering = true
-wheel_friction_slip = 11.0
-suspension_travel = 0.01
+wheel_friction_slip = 100.0
 suspension_stiffness = 25.0
 
 [node name="MeshInstance" type="MeshInstance" parent="VehicleBody/VehicleWheel2"]
@@ -60,7 +58,7 @@ material/2 = null
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.65, -0.4, -1 )
 engine_force = 500.0
 use_as_traction = true
-suspension_travel = 0.01
+wheel_friction_slip = 100.0
 suspension_stiffness = 25.0
 
 [node name="MeshInstance" type="MeshInstance" parent="VehicleBody/VehicleWheel3"]
@@ -73,7 +71,7 @@ material/2 = null
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.65, -0.4, -1 )
 engine_force = 500.0
 use_as_traction = true
-suspension_travel = 0.01
+wheel_friction_slip = 100.0
 suspension_stiffness = 25.0
 
 [node name="MeshInstance2" type="MeshInstance" parent="VehicleBody/VehicleWheel4"]
