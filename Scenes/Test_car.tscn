@@ -12,7 +12,6 @@
 [node name="VehicleBody" type="VehicleBody" parent="." groups=["Player"]]
 transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 0 )
 mass = 1000.0
-engine_force = 500.0
 script = ExtResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="VehicleBody"]
@@ -28,9 +27,9 @@ material/3 = null
 
 [node name="VehicleWheel" type="VehicleWheel" parent="VehicleBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.65, -0.4, 1.22 )
-engine_force = 500.0
 use_as_traction = true
 use_as_steering = true
+wheel_rest_length = 0.1
 wheel_friction_slip = 100.0
 suspension_stiffness = 25.0
 
@@ -42,9 +41,9 @@ material/2 = null
 
 [node name="VehicleWheel2" type="VehicleWheel" parent="VehicleBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.65, -0.4, 1.22 )
-engine_force = 500.0
 use_as_traction = true
 use_as_steering = true
+wheel_rest_length = 0.1
 wheel_friction_slip = 100.0
 suspension_stiffness = 25.0
 
@@ -56,8 +55,8 @@ material/2 = null
 
 [node name="VehicleWheel3" type="VehicleWheel" parent="VehicleBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.65, -0.4, -1 )
-engine_force = 500.0
 use_as_traction = true
+wheel_rest_length = 0.1
 wheel_friction_slip = 100.0
 suspension_stiffness = 25.0
 
@@ -69,8 +68,8 @@ material/2 = null
 
 [node name="VehicleWheel4" type="VehicleWheel" parent="VehicleBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.65, -0.4, -1 )
-engine_force = 500.0
 use_as_traction = true
+wheel_rest_length = 0.1
 wheel_friction_slip = 100.0
 suspension_stiffness = 25.0
 
