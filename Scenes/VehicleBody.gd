@@ -18,7 +18,6 @@ func _physics_process(delta):
 	
 	var brake_input = Input.get_action_strength("SPACE")
 	brake = brake_power*brake_input
-	#print(brake)
 	
 func _ready():
 	pass
