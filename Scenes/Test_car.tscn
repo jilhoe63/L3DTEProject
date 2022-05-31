@@ -26,67 +26,67 @@ material/1 = null
 material/2 = null
 material/3 = null
 
-[node name="VehicleWheel" type="VehicleWheel" parent="VehicleBody"]
+[node name="Front_Right" type="VehicleWheel" parent="VehicleBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.65, -0.4, 1.22 )
-engine_force = 500.0
+engine_force = 1e+08
 use_as_traction = true
 use_as_steering = true
 wheel_rest_length = 0.1
 wheel_friction_slip = 1.0
-suspension_travel = 0.3
+suspension_travel = 0.2
 suspension_stiffness = 25.0
 damping_compression = 0.7
 
-[node name="MeshInstance" type="MeshInstance" parent="VehicleBody/VehicleWheel"]
+[node name="MeshInstance" type="MeshInstance" parent="VehicleBody/Front_Right"]
 mesh = ExtResource( 2 )
 material/0 = null
 material/1 = null
 material/2 = null
 
-[node name="VehicleWheel2" type="VehicleWheel" parent="VehicleBody"]
+[node name="Front_Left" type="VehicleWheel" parent="VehicleBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.65, -0.4, 1.22 )
-engine_force = 500.0
+engine_force = 1e+08
 use_as_traction = true
 use_as_steering = true
 wheel_rest_length = 0.1
 wheel_friction_slip = 1.0
-suspension_travel = 0.3
+suspension_travel = 0.2
 suspension_stiffness = 25.0
 damping_compression = 0.7
 
-[node name="MeshInstance" type="MeshInstance" parent="VehicleBody/VehicleWheel2"]
+[node name="MeshInstance" type="MeshInstance" parent="VehicleBody/Front_Left"]
 mesh = ExtResource( 2 )
 material/0 = null
 material/1 = null
 material/2 = null
 
-[node name="VehicleWheel3" type="VehicleWheel" parent="VehicleBody"]
+[node name="Rear_Left" type="VehicleWheel" parent="VehicleBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.65, -0.4, -1 )
-engine_force = 500.0
+engine_force = 1e+08
 use_as_traction = true
 wheel_rest_length = 0.1
 wheel_friction_slip = 1.0
-suspension_travel = 0.3
+suspension_travel = 0.2
 suspension_stiffness = 25.0
 damping_compression = 0.7
 
-[node name="MeshInstance" type="MeshInstance" parent="VehicleBody/VehicleWheel3"]
+[node name="MeshInstance" type="MeshInstance" parent="VehicleBody/Rear_Left"]
 mesh = ExtResource( 2 )
 material/0 = null
 material/1 = null
 material/2 = null
 
-[node name="VehicleWheel4" type="VehicleWheel" parent="VehicleBody"]
+[node name="Rear_Right" type="VehicleWheel" parent="VehicleBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.65, -0.4, -1 )
-engine_force = 500.0
+engine_force = 1e+08
 use_as_traction = true
 wheel_rest_length = 0.1
 wheel_friction_slip = 1.0
-suspension_travel = 0.3
+suspension_travel = 0.2
 suspension_stiffness = 25.0
 damping_compression = 0.7
 
-[node name="MeshInstance2" type="MeshInstance" parent="VehicleBody/VehicleWheel4"]
+[node name="MeshInstance2" type="MeshInstance" parent="VehicleBody/Rear_Right"]
 mesh = ExtResource( 2 )
 material/0 = null
 material/1 = null

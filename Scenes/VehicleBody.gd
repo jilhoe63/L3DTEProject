@@ -1,6 +1,6 @@
 extends VehicleBody
 	
-var horse_power = 500
+var horse_power = 5000
 var accel_speed = 200
 
 var steer_angle = deg2rad(30)
@@ -11,7 +11,7 @@ var brake_speed = 0
 
 func _physics_process(delta):
 	var throt_input = Input.get_action_strength("W")-Input.get_action_strength("S")
-	engine_force = throt_input*horse_power
+	engine_force = lerp(engine_force,throt_input*horse_power,accel_speed*delta)
 
 	var steer_input = -Input.get_action_strength("D")+Input.get_action_strength("A")	
 	steering = lerp_angle(steering,steer_input*steer_angle,steer_speed*delta)
