@@ -35,7 +35,7 @@ wheel_rest_length = 0.1
 wheel_friction_slip = 1.0
 suspension_travel = 0.2
 suspension_stiffness = 25.0
-damping_compression = 0.7
+damping_compression = 0.3
 
 [node name="MeshInstance" type="MeshInstance" parent="VehicleBody/Front_Right"]
 mesh = ExtResource( 2 )
@@ -52,7 +52,7 @@ wheel_rest_length = 0.1
 wheel_friction_slip = 1.0
 suspension_travel = 0.2
 suspension_stiffness = 25.0
-damping_compression = 0.7
+damping_compression = 0.3
 
 [node name="MeshInstance" type="MeshInstance" parent="VehicleBody/Front_Left"]
 mesh = ExtResource( 2 )
@@ -68,7 +68,7 @@ wheel_rest_length = 0.1
 wheel_friction_slip = 1.0
 suspension_travel = 0.2
 suspension_stiffness = 25.0
-damping_compression = 0.7
+damping_compression = 0.3
 
 [node name="MeshInstance" type="MeshInstance" parent="VehicleBody/Rear_Left"]
 mesh = ExtResource( 2 )
@@ -84,7 +84,7 @@ wheel_rest_length = 0.1
 wheel_friction_slip = 1.0
 suspension_travel = 0.2
 suspension_stiffness = 25.0
-damping_compression = 0.7
+damping_compression = 0.3
 
 [node name="MeshInstance2" type="MeshInstance" parent="VehicleBody/Rear_Right"]
 mesh = ExtResource( 2 )

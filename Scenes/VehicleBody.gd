@@ -1,6 +1,6 @@
 extends VehicleBody
 	
-var horse_power = 5000
+var horse_power = 432
 var accel_speed = 200
 
 var steer_angle = deg2rad(30)
