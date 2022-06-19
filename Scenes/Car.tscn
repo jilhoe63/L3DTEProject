@@ -15,7 +15,7 @@ extents = Vector3( 1, 0.24015, 1.6045 )
 
 [sub_resource type="CylinderMesh" id=6]
 
-[node name="Spatial" type="VehicleBody"]
+[node name="Spatial" type="VehicleBody" groups=["Player"]]
 mass = 800.0
 script = ExtResource( 1 )
 
@@ -29,8 +29,10 @@ shape = SubResource( 2 )
 [node name="Front_Left" type="VehicleWheel" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1.5 )
 use_as_steering = true
-suspension_travel = 0.2
-suspension_stiffness = 20.0
+wheel_roll_influence = 0.001
+wheel_radius = 0.4
+damping_compression = 1.9
+damping_relaxation = 2.0
 
 [node name="MeshInstance" type="MeshInstance" parent="Front_Left"]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
@@ -40,8 +42,10 @@ material/0 = null
 [node name="Front_Right" type="VehicleWheel" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1.5 )
 use_as_steering = true
-suspension_travel = 0.2
-suspension_stiffness = 20.0
+wheel_roll_influence = 0.001
+wheel_radius = 0.4
+damping_compression = 1.9
+damping_relaxation = 2.0
 
 [node name="MeshInstance" type="MeshInstance" parent="Front_Right"]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
@@ -50,8 +54,10 @@ material/0 = null
 
 [node name="Rear_Right" type="VehicleWheel" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1.5 )
-suspension_travel = 0.2
-suspension_stiffness = 20.0
+wheel_roll_influence = 0.001
+wheel_radius = 0.4
+damping_compression = 1.9
+damping_relaxation = 2.0
 
 [node name="MeshInstance" type="MeshInstance" parent="Rear_Right"]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
@@ -60,8 +66,10 @@ material/0 = null
 
 [node name="Rear_Left" type="VehicleWheel" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1.5 )
-suspension_travel = 0.2
-suspension_stiffness = 20.0
+wheel_roll_influence = 0.001
+wheel_radius = 0.4
+damping_compression = 1.9
+damping_relaxation = 2.0
 
 [node name="MeshInstance" type="MeshInstance" parent="Rear_Left"]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )

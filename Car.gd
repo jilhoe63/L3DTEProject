@@ -1,8 +1,8 @@
 extends VehicleBody
 
 var max_rpm = 11000
-var max_torque = 300
-var brake_power = 4
+var max_torque = 200
+var brake_power = 10
 
 func _physics_process(delta):
 	steering = lerp(steering, Input.get_axis("D","A") * 0.4, 5 * delta)
