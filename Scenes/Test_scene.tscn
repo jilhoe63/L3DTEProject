@@ -50,8 +50,6 @@ shape = SubResource( 1 )
 transform = Transform( 0.22, 0, 0, 0, 0.22, 0, 0, 0, 0.22, 0, 0, 0 )
 mesh = ExtResource( 3 )
 skeleton = NodePath("../..")
-material/0 = null
-material/1 = null
 
 [node name="StaticBody2" type="StaticBody" parent="."]
 transform = Transform( 66.7679, 0, 0, 0, 0.138804, 0, 0, 0, 66.7679, 134.235, 0, 0 )
@@ -63,8 +61,6 @@ shape = SubResource( 1 )
 transform = Transform( 0.22, 0, 0, 0, 0.22, 0, 0, 0, 0.22, 0, 0, 0 )
 mesh = ExtResource( 3 )
 skeleton = NodePath("../..")
-material/0 = null
-material/1 = null
 
 [node name="StaticBody3" type="StaticBody" parent="."]
 transform = Transform( 5.40887, -0.432825, 0, 2.59695, 0.901478, 0, 0, 0, 2, 68.1334, 1.23657, 0 )
@@ -77,8 +73,6 @@ shape = SubResource( 1 )
 transform = Transform( 0.22, 0, 0, 0, 0.22, 0, 0, 0, 0.22, 0, 0, 0 )
 mesh = ExtResource( 3 )
 skeleton = NodePath("../..")
-material/0 = null
-material/1 = null
 
 [node name="StaticBody4" type="StaticBody" parent="."]
 transform = Transform( 9.82784, -0.184758, -5.44831e-09, 1.78462, 0.949297, -1.55291, 0.478188, 0.254363, 5.79556, 87.0678, 4.6753, 0 )
@@ -91,8 +85,6 @@ shape = SubResource( 1 )
 transform = Transform( 0.22, 0, 0, 0, 0.22, 0, 0, 0, 0.22, 0, 0, 0 )
 mesh = ExtResource( 3 )
 skeleton = NodePath("../..")
-material/0 = null
-material/1 = null
 
 [node name="Rigid_Body_Test" parent="." instance=ExtResource( 2 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 99.6595, 6.13346, 28.6288 )
