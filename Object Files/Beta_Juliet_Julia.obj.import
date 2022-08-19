@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Beta_Juliet_Julia.obj-3e209e854b3296480089a0c5500ac69b.mesh"
+
+[deps]
+
+files=[ "res://.import/Beta_Juliet_Julia.obj-3e209e854b3296480089a0c5500ac69b.mesh" ]
+
+source_file="res://Object Files/Beta_Juliet_Julia.obj"
+dest_files=[ "res://.import/Beta_Juliet_Julia.obj-3e209e854b3296480089a0c5500ac69b.mesh", "res://.import/Beta_Juliet_Julia.obj-3e209e854b3296480089a0c5500ac69b.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286
