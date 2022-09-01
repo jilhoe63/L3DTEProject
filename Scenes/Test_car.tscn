@@ -21,10 +21,6 @@ shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="VehicleBody"]
 mesh = ExtResource( 1 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
 
 [node name="Front_Right" type="VehicleWheel" parent="VehicleBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.65, -0.4, 1.22 )
@@ -39,9 +35,6 @@ damping_compression = 0.3
 
 [node name="MeshInstance" type="MeshInstance" parent="VehicleBody/Front_Right"]
 mesh = ExtResource( 2 )
-material/0 = null
-material/1 = null
-material/2 = null
 
 [node name="Front_Left" type="VehicleWheel" parent="VehicleBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.65, -0.4, 1.22 )
@@ -56,9 +49,6 @@ damping_compression = 0.3
 
 [node name="MeshInstance" type="MeshInstance" parent="VehicleBody/Front_Left"]
 mesh = ExtResource( 2 )
-material/0 = null
-material/1 = null
-material/2 = null
 
 [node name="Rear_Left" type="VehicleWheel" parent="VehicleBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.65, -0.4, -1 )
@@ -72,9 +62,6 @@ damping_compression = 0.3
 
 [node name="MeshInstance" type="MeshInstance" parent="VehicleBody/Rear_Left"]
 mesh = ExtResource( 2 )
-material/0 = null
-material/1 = null
-material/2 = null
 
 [node name="Rear_Right" type="VehicleWheel" parent="VehicleBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.65, -0.4, -1 )
@@ -88,9 +75,6 @@ damping_compression = 0.3
 
 [node name="MeshInstance2" type="MeshInstance" parent="VehicleBody/Rear_Right"]
 mesh = ExtResource( 2 )
-material/0 = null
-material/1 = null
-material/2 = null
 
 [node name="Camera" type="SpringArm" parent="VehicleBody"]
 transform = Transform( -0.792673, -0.157788, 0.588874, -2.26267e-08, 0.965926, 0.258819, -0.609647, 0.205159, -0.765663, 3.275, 1.10233, -3.52617 )
