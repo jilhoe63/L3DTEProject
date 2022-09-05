@@ -27,3 +27,12 @@ func _on_Area_Timer_Start_body_entered(body):
 		timer_on = true
 		print("timer start")
 		pass
+
+
+func _on_Area_Timer_Stop_body_entered(body):
+	if body.is_in_group("Player"):
+		timer_on = false
+		time = 0
+		print("timer start")
+		pass
+	pass # Replace with function body.
