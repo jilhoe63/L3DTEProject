@@ -8,8 +8,8 @@ func _process(delta):
 	if(timer_on):
 		time += delta
 	
-	var mils = fmod(time,1)*1000
-	var secs = fmod(time,60)
+	var mils = fmod(time,1)*100
+	var secs = fmod(time,120)
 	var mins = fmod(time, 60*60) / 60
 	
 	var time_passed = "%02d : %02d : %03d" % [mins,secs,mils]
