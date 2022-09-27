@@ -40,7 +40,7 @@ mesh = ExtResource( 2 )
 skeleton = NodePath("../CollisionShape")
 
 [node name="Spatial" parent="." instance=ExtResource( 1 )]
-transform = Transform( 0.0680675, 0, -0.997681, 0, 1, 0, 0.997681, 0, 0.0680675, 0, 15.4041, 62.7125 )
+transform = Transform( 0.805691, 0, -0.592337, 0, 1, 0, 0.592337, 0, 0.805691, 68.8403, 15.4041, 49.4193 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource( 3 )
